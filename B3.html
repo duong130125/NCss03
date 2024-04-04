@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { id: 1, name: "Nguyễn Văn Phúc" },
+            { id: 2, name: "Trần Thị Hoa" },
+            { id: 3, name: "Phạm Văn MInh" }
+        ];
+
+        function greetStudents(student) {
+            console.log(`Xin chào bạn, ${student.name}!`);
+        }
+        students.forEach(greetStudents);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mergeArrays(...arrays) {
+            let length = arrays[0].length;
+            let isValid = arrays.every(arr => arr.length === length);
+            if (!isValid) {
+                console.log("Các mảng không có cùng độ dài.");
+                return;
+            }
+
+            let result = arrays[0].map((_, index) => arrays.map(arr => arr[index]));
+
+            return result;
+        }
+
+        console.log(mergeArrays([1, 2, 3], ['a', 'b', 'c'], [true, false, true])); 
+    </script>
+</body>
+</html>
